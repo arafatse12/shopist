@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <title>Shopist | Documentation</title>
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/stroke.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="js/syntax-highlighter/styles/shCore.css" media="all">
+    <link rel="stylesheet" type="text/css" href="js/syntax-highlighter/styles/shThemeRDark.css" media="all">
+
+    <!-- CUSTOM -->
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <div class="container">
+            <div style="position:fixed;top:0px;width:100%;background:darkorchid;z-index:9999;padding:10px 0px;text-align:center;"><a style="background-color:#ddd;color:darkorchid;padding:10px 40px;" target="_blank" href="https://codecanyon.net/item/shopist-laravel-ecommerce/17475699">Buy Now</a></div>    
+
+            <section id="top" class="section docs-heading">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="big-title text-center">
+                            <h1>Shopist | Laravel eCommerce, CMS and Designer</h1>
+                            <p class="lead">documentation version 2.3</p>
+                        </div>
+                        <!-- end title -->
+                    </div>
+                    <!-- end 12 -->
+                </div>
+                <!-- end row -->
+
+                <hr>
+
+            </section>
+            <!-- end section -->
+
+            <div class="row">
+
+                <div class="col-md-3">
+                    <nav class="docs-sidebar" data-spy="affix" data-offset-top="300" data-offset-bottom="200" role="navigation">
+                        <ul class="nav">
+                            <li><a href="#line1">Getting Started</a></li>
+                            <li><a href="#line3">How to Install</a></li>
+                            <li><a href="#line7">Product Types</a>
+                                <ul class="nav">
+                                    <li><a href="#line7_1">Simple Product</a></li>
+                                    <li><a href="#line7_2">Configurable Product</a></li>
+                                    <li><a href="#line7_3">Customizable Product</a></li>
+                                    <li><a href="#line7_4">Digital/Downloadable Product</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#line8">Role Based Pricing</a></li>
+                            <li><a href="#line9">Multi Language Setup</a></li>
+                            <li><a href="#line10">Product Compare Setup</a></li>
+                            <li><a href="#line11">Product video Setup</a></li>
+                            <li><a href="#line15">Upsells and Cross Sells Products Setup</a></li>
+                            <li><a href="#line12">Manage Google Recaptcha</a></li>
+                            <li><a href="#line13">Templating System</a></li>
+                            <li><a href="#line14">Version History (Changelog)</a></li>
+                        </ul>
+                    </nav >
+                </div>
+                <div class="col-md-9">
+                    <section class="welcome">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Introduction<hr></h2>
+                                <div class="row">
+
+                                    <div class="col-md-12 full">
+                                        <div class="intro1">
+                                            <ul>
+                                                <li><strong>Item Name : </strong>Shopist eCommerce, cms and designer</li>
+                                                <li><strong>Item Version : </strong> v 2.3</li>
+                                                <li><strong>Author  : </strong> <a href="https://codecanyon.net/user/loise100" target="_blank">Loise100</a></li>
+                                                <li><strong>Item Demo : </strong> <a href="http://awesomewaterfall.com/shopist/home" target="_blank">Check Demo</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <hr>
+                                        <div>
+                                            <p>First of all, Thank you so much for purchasing this eCommerce script and for being my loyal customer.
+                                                <strong>You are awesome!</strong>
+                                                <br> You are entitled to get free updates to this product + exceptional support from the author directly.
+                                            </p>
+
+                                            <p>This documentation is to help you regarding each step of shopist setup. Please go through the documentation carefully to understand how this work and how to edit this properly.
+                                            <h4>Server Requirements</h4>
+                                            <p>You will need the following major things to run the shopist.</p>
+                                            <ol>
+                                                <li>PHP >= 5.6.4</li>
+                                                <li>OpenSSL PHP Extension</li>
+                                                <li>PDO PHP Extension</li>
+                                                <li>Mbstring PHP Extension</li>
+                                                <li>Tokenizer PHP Extension</li>
+                                                <li>PHP Fileinfo extension enable from php.ini</li>
+                                            </ol>
+                                            <div class="intro2 clearfix">
+                                                <p><i class="fa fa-exclamation-triangle"></i> Be careful with your server requirements while installing shopist.
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- end row -->
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="line1" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Getting Started <a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>This is very easy and fully customizable eCommerce for laravel. The main feature and difference of other eCommerce with the custom products designer. It’s unique from others. Installation very easy. It has templating system for home, product, single page, blog pages. Dynamic language setup will be very helpful for the client.</p>  
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+                    <section id="line3" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">How to Install Shopist <a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        
+                        <!-- end row -->
+                        <ol>
+                            <li>Unzip the shopist folder.</li>
+                            <li>Copy all files from shopist folder to your server</li>
+                       
+                            Then go index.php file from root folder.
+                            <pre class="brush: html; highlight: [2,4,7,9]">
+                                1. Find 
+                                require __DIR__.'/../shopist/bootstrap/autoload.php';
+                                and change with the
+                                require __DIR__.'/../bootstrap/autoload.php';
+
+                                2. Find
+                                $app = require_once __DIR__.'/../shopist/bootstrap/app.php';
+                                and change with the
+                                $app = require_once __DIR__.'/../bootstrap/app.php';
+                            </pre>
+                          <li>Open .env file from root folder and change DB_HOST, DB_DATABASE, DB_USERNAME, DB_PASSWORD with your server DB information</li>
+                          <li>Then hit your domain. Suppose your domain name is "example.com". So this case hit on http://example.com.</li>
+                          <li>You will get admin registration form. Fill the information for the super admin access.</li>
+                          <p>If you have sub directory on your server, then change with this way</p>
+                          <pre class="brush: html; highlight: [2,4,7,9]">
+                            1. Find 
+                            require __DIR__.'/../shopist/bootstrap/autoload.php';
+                            and change with the
+                            require __DIR__.'/../sub directory name/bootstrap/autoload.php';
+
+                            2. Find
+                            $app = require_once __DIR__.'/../shopist/bootstrap/app.php';
+                            and change with the
+                            $app = require_once __DIR__.'/../sub directory name/bootstrap/app.php';
+                        </pre>
+                        </ol>
+                        <div class="intro2 clearfix">
+                            <p><i class="fa fa-exclamation-triangle"></i> 
+                                <strong>Your admin url</strong><br>
+                                https://example.com/admin/login <br>
+                                if you have sub directory<br>
+                                https://example.com/sub directory name/admin/login<br><br>
+                                
+                                <strong>Your frontend url</strong><br>
+                                https://example.com<br>
+                                if you have sub directory<br>
+                                https://example.com/sub directory name<br><br>
+                                
+                                <strong>Cache clear url</strong><br>
+                                https://example.com/clear-cache<br>
+                                if you have sub directory<br>
+                                https://example.com/sub directory name/clear-cache
+                            </p>
+                        </div>
+                        </div>
+                    </section>
+                    <!-- end section -->
+
+                    
+
+                    <section id="line7" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Product types description<a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a href="http://www.awesomewaterfall.com/plugin-image/simple-product.png" data-rel="prettyPhoto"><img src="http://www.awesomewaterfall.com/plugin-image/simple-product.png" alt="" class="img-responsive img-thumbnail"></a>
+                            </div>
+
+                            <div class="col-md-8">
+                                <h4 id="line7_1">Simple Product - <a href="#top">#back to top</a></h4>
+                                <p>There are no options like size or color that the end user can pick during the order. It's really simple.</p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+                        <br>
+                        <h4>Simple Product Configure Video</h4>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="embed-responsive embed-responsive-16by9">                                    
+                                    <video controls="controls" type="video/mp4" preload="none" poster="http://www.awesomewaterfall.com/plugin-image/simple-product-screenshot.png">
+                                    <source src="http://www.awesomewaterfall.com/plugin-image/simple-product-config.mp4" autostart="false">
+                                    
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a href="http://www.awesomewaterfall.com/plugin-image/configurable.png" data-rel="prettyPhoto"><img src="http://www.awesomewaterfall.com/plugin-image/configurable.png" alt="" class="img-responsive img-thumbnail"></a>
+                            </div>
+
+                            <div class="col-md-8">
+                                <h4 id="line7_2">Configurable Product - <a href="#top">#back to top</a></h4>
+                                <p>There are one or more options like size or color that the end user can pick during the order.</p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <br>
+                        <h4>Variable Product Configure Video</h4>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="embed-responsive embed-responsive-16by9">                                    
+                                    <video controls="controls" type="video/mp4" preload="none" poster="http://www.awesomewaterfall.com/plugin-image/variable-product-screenshot.png">
+                                    <source src="http://www.awesomewaterfall.com/plugin-image/variable-product-config.mp4" autostart="false">
+                                    
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a href="http://www.awesomewaterfall.com/plugin-image/customizable-product.png" data-rel="prettyPhoto"><img src="http://www.awesomewaterfall.com/plugin-image/customizable-product.png" alt="" class="img-responsive img-thumbnail"></a>
+                            </div>
+
+                            <div class="col-md-8">
+                                <h4 id="line7_3">Customizable Product - <a href="#top">#back to top</a></h4>
+                                <p>User can design on any products that the end user can pick during the order.</p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <br>
+                        <h4>Customizable Product Configure Video</h4>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="embed-responsive embed-responsive-16by9">                                    
+                                    <video controls="controls" type="video/mp4" preload="none" poster="http://www.awesomewaterfall.com/plugin-image/customizable-product-config.png">
+                                    <source src="http://www.awesomewaterfall.com/plugin-image/customizable-product-config.mp4" autostart="false">
+                                    
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a href="http://www.awesomewaterfall.com/plugin-image/digital-product.png" data-rel="prettyPhoto"><img src="http://www.awesomewaterfall.com/plugin-image/digital-product.png" alt="" class="img-responsive img-thumbnail"></a>
+                            </div>
+
+                            <div class="col-md-8">
+                                <h4 id="line7_4">Digital/Downloadable Product - <a href="#top">#back to top</a></h4>
+                                <p>A downloadable product can be anything that you can deliver as a file, such as an eBook, music, video, software application, or an update. You can offer an album for sale, and sell each song individually. You can also use a downloadable product to deliver an electronic version of your product catalog.</p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <br>
+                        <h4>Digital/Downloadable Product Configure Video</h4>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="embed-responsive embed-responsive-16by9">                                    
+                                    <video controls="controls" type="video/mp4" preload="none" poster="http://www.awesomewaterfall.com/plugin-image/downloadable-product-config.png">
+                                    <source src="http://www.awesomewaterfall.com/plugin-image/downloadable-product-config.mp4" autostart="false">
+                                    
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <br>
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line8" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Role Based Pricing <a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>Role based pricing is very effective for admin and customer. admin can easily set pricing depend on user role. you will be very clear with the below video.</p>
+                                <br>
+                                <h4>Role Based Pricing config Video</h4>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="embed-responsive embed-responsive-16by9">                                    
+                                            <video controls="controls" type="video/mp4" preload="none" poster="http://www.awesomewaterfall.com/plugin-image/role-based-pricing.png">
+                                            <source src="http://www.awesomewaterfall.com/plugin-image/role-based-pricing.mp4" autostart="false">
+
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <br>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+                    
+                    <section id="line9" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Multi Language Configure <a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>To understand for the different country need different language. so shopist has unique multi language logic. you can check with the video.</p>
+                                <br>
+                                <h4>Multi Language Configure Video</h4>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="embed-responsive embed-responsive-16by9">                                    
+                                            <video controls="controls" type="video/mp4" preload="none" poster="http://www.awesomewaterfall.com/plugin-image/multi-lang-config.png">
+                                            <source src="http://www.awesomewaterfall.com/plugin-image/multi-lang-config.mp4" autostart="false">
+
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <br>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line10" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Product Compare Configure <a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>To compare products between multiple products, shopist has extra field. To better understand you can check the video. </p>
+                                <br>
+                                <h4>Compare Product Configure Video</h4>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="embed-responsive embed-responsive-16by9">                                    
+                                            <video controls="controls" type="video/mp4" preload="none" poster="http://www.awesomewaterfall.com/plugin-image/product-compare.png">
+                                            <source src="http://www.awesomewaterfall.com/plugin-image/product-compare.mp4" autostart="false">
+
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <br>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+                    
+                    <section id="line11" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Product Video Configure <a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>You can set product video easily at the details page. I think video will be the very helpful for the better understand.</p>
+                                <br>
+                                <h4>Product video Configure</h4>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="embed-responsive embed-responsive-16by9">                                    
+                                            <video controls="controls" type="video/mp4" preload="none" poster="http://www.awesomewaterfall.com/plugin-image/product-video.png">
+                                            <source src="http://www.awesomewaterfall.com/plugin-image/product-video.mp4" autostart="false">
+
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <br>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+                    
+                    <section id="line15" class="section">
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Upsells and Cross Sells Products Setup <a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+                        
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p><strong>Up-sells</strong> for a product are items that you would like your customer to buy instead of the product that he is viewing, and they are pricey, better quality, etc.</p>
+                                <p><strong>Cross-sell</strong> items can appear both in the product page and in the shopping cart but they are a bit like an impulse buy – similar to items at the cash registers in grocery stores.</p>
+                                <br>
+                                <h4>Configure video</h4>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="embed-responsive embed-responsive-16by9">                                    
+                                            <video controls="controls" type="video/mp4" preload="none" poster="http://www.awesomewaterfall.com/plugin-image/upsell-crosssell.png">
+                                            <source src="http://www.awesomewaterfall.com/plugin-image/upandcross-video.mp4" autostart="false">
+
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <br>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section id="line12" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Google Recaptcha Setup <a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>reCAPTCHA is a CAPTCHA-like system designed to establish that a computer user is human (normally in order to protect websites from bots) and, at the same time, assist in the digitization of books.</p>
+                                <br>
+                                <h4>RECAPTCHA Sepup procedure</h4>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <ol>
+                                            <li>
+                                                To Get google recaptcha site key and secret-key go <a href="https://www.google.com/recaptcha/admin" target="_blank">https://www.google.com/recaptcha/admin</a>.
+                                                <br>And then go Shopist Settings->General-> Google Recaptcha Option. Check the screenshot. <br>
+                                                <img src="http://www.awesomewaterfall.com/plugin-image/recaptcha.png" class="img-responsive" style="margin-top: 30px;">
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <hr>
+                                <br>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+                    
+                    
+                    
+                    <section id="line13" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Templating System <a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>Shopist has muultiple templates for particular page. like header, home, products, single page, blogs. You can choose any templates for specific page. Check the screenshot.</p>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <img src="http://www.awesomewaterfall.com/plugin-image/appearance.png" class="img-responsive" style="margin-top: 30px;">
+                                    </div>
+                                </div>
+                                <hr>
+                                <br>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line14" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Version History (Changelog) <a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                
+                                <p>Once again, thank you so much for purchasing this script. As I said at the beginning, I'd be glad to help you if you have any questions relating to this script. No guarantees, but I'll do my best to assist. If you have a more general question relating to the shopist on Codecanyon, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+
+                                <hr>
+
+                                <h4>Changelog</h4>
+
+                                <pre class="brush: html">
+                                        -----------------------------------------------------------------------------------------
+                                        Version 2.3 - November 5th, 2017
+                                        -----------------------------------------------------------------------------------------
+
+                                        - Upsells and Cross Sells products added 
+                                        - Digital/Downloadable product improvements
+                                        - User account improvements
+                                        - Admin order improvements
+                                        - Latest and today's product bug fixing
+                                        - and more major bug fixing
+    
+                                        -----------------------------------------------------------------------------------------
+                                        Version 2.2 - October 15th, 2017
+                                        -----------------------------------------------------------------------------------------
+
+                                        - Color, Size filter added
+                                        - Product zooming 
+                                        - Product  share by social media (facebook, twitter, google plus, pinterest, linkedin etc)
+                                        - Product export/import from admin
+                                        - Role based pricing
+                                        - Digital/Downloadable product type added
+                                        - Table organize
+                                        - Customer order bug fixing
+                                        - and more major bug fixing 
+
+                                        -----------------------------------------------------------------------------------------
+                                        Version 2.1 - July 23th, 2017
+                                        -----------------------------------------------------------------------------------------
+                                        - Major bug fixing
+
+                                        -----------------------------------------------------------------------------------------
+                                        Version 2.1 - May 23th, 2017
+                                        -----------------------------------------------------------------------------------------
+                                        - Stripe payment gateway implementation
+                                        - Added two home page template
+                                        - Added two header template
+                                        - Seo manage from specific product, blog and page.
+                                        - Dynamic option for google recaptcha
+                                        - Product compare option 
+                                        - Frontend settings extended
+                                        - Custom CMS implementation
+                                        - and bug fixing
+
+                                        -----------------------------------------------------------------------------------------
+                                        Version 2.0 - March 16th, 2017
+                                        -----------------------------------------------------------------------------------------
+                                        - Dynamic Blogs System
+                                        - Dynamic Testimonials
+                                        - User Roles and Permissions System
+                                        - Coupon Manager
+                                        - SEO Manager
+                                        - Requested Products Manager
+                                        - Subscriptions Manager
+                                        - Dynamic Languages Settings
+                                        - Templeting System
+                                        - Dynamic Languages Change from Frontend
+                                        - Dynamic Currency Change from Frontend
+                                        - User Account
+                                        - Mini Cart System
+                                        - Multistep Checkout   
+                                        - Dyanmic Review System
+                                        - Bug Fixing
+
+                                        -----------------------------------------------------------------------------------------
+                                        Version 1.2 - October 10th, 2016
+                                        -----------------------------------------------------------------------------------------
+                                        - Major bug fixing 
+
+                                        -----------------------------------------------------------------------------------------
+                                        Version 1.1 - September  27th, 2016
+                                        -----------------------------------------------------------------------------------------
+                                        - Mailchimp added for request product 
+                                        - Multilanguage supported
+                                        - And bug fixing
+
+
+                                      </pre>
+
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+                </div>
+                <!-- // end .col -->
+
+            </div>
+            <!-- // end .row -->
+
+        </div>
+        <!-- // end container -->
+
+    </div>
+    <!-- end wrapper -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/retina.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+
+    <!-- CUSTOM PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/syntax-highlighter/scripts/shCore.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushXml.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushCss.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushJScript.js"></script>
+
+</body>
+
+</html>

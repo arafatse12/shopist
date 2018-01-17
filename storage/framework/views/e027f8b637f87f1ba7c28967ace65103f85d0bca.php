@@ -1,3 +1,12 @@
+<style type="text/css">
+  .single-box{
+
+    margin-top: 15px !important; 
+  }
+
+</style>
+
+
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -55,7 +64,7 @@
     </div>
   </div>
     
-  <?php if(!empty($appearance_settings_data['home_details']['collection_cat_list']) && count($appearance_settings_data['home_details']['collection_cat_list']) > 0): ?>
+ <?php if(!empty($appearance_settings_data['home_details']['collection_cat_list']) && count($appearance_settings_data['home_details']['collection_cat_list']) > 0): ?>
   <div class="row">
     <div id="categories_collection" class="categories-collection">
       <?php $__currentLoopData = $appearance_settings_data['home_details']['collection_cat_list']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $collection_cat_details): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>

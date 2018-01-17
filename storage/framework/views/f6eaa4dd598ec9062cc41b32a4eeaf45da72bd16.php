@@ -1,5 +1,28 @@
 <?php echo $__env->make('includes.frontend.header-content-custom-css', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
+<style type="text/css">
+  header #header_content ul.right-menu li, header #header_content ul.all-menu li{
+     padding: 0px 2px;
+
+   }
+   .carousel-inner {
+    position: relative;
+    width: 66%;
+    overflow: hidden;
+    margin-left: 63px;
+   }
+   .carousel-indicators{
+    margin-left: 5%;
+   }
+   .layoutRow1Right {
+    width: 350px;
+    height: 350px;
+    float: right;
+    background: #DFDFDF;
+  }
+
+</style>
+
 <div id="header_content" class="header-before-slider header-background">
   <div class="top-header">
     <div class="container">
@@ -23,6 +46,8 @@
               <?php endif; ?>
             </div>
           </div>
+          
+
           <div class="dropdown language-list">
             <?php if(count(get_frontend_selected_languages_data()) > 0): ?>
               <?php if(get_frontend_selected_languages_data()['lang_code'] == 'en'): ?>
@@ -131,52 +156,63 @@
                     <ul>
                       
                       <li class="dropdown-header">
-                        <img src="http://localhost/shopist/public/uploads/1516000681-h-150-stilini-yansit-lansman-yani-1Ly_en.png"> 
+                        <img src=""> 
                         
-                        Hijab
+                        NEW
                       </li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">shawls</a></li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/Scarves">scarves</a></li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">headwear</a></li>
+                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/new-in-dresses">New In: Dresses</a></li>
+                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/new-in-tunics">New In: Tunics</a></li>
+                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/new-in-topcoats">New In: Topcoats</a></li>
+                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/new-in-abayas">New In: Abayas</a></li>
+                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/new-in-pants">New In: Pants</a></li>
+                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/new-in-skirts">New In: Skirts</a></li>
+                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/new-in-jeans">New In: Jeans</a></li>
+                       
+                           
+                       
                     </ul>
 
                   </li>
-                  
-                  
-                  <li class="col-xs-12 col-sm-4">  
+                   <li class="col-xs-12 col-sm-4">  
                     
                     <ul>
                       
                       <li class="dropdown-header">
-                        <img src="http://localhost/shopist/public/uploads/1516003068-h-150-evo1_large.jpg"> 
+                        <img src=""> 
+                        <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/new-in-shoes">New In: Shoes</a></li>
+                        <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/new-in-bags">New In: Bags</a></li>
+                         <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/new-in-shawls">New In: Shawls</a></li>
+                          <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/new-in-scarves">New In: Scarves</a></li>
+                          <li class="dropdown-header"><a href ="http://islamicdressonline.com/product/categories/semi-instant-shawls">
                         
-                        chiffon
+                        Semi-Instant Shawls</a>
+                        
+                      </li>
+                      <li class="dropdown-header"><a href="http://islamicdressonline.com/product/categories/instant-scarves">
+                         
+                        
+                        Instant Scarves</a>
+                      </li>
+                       
+                        
+                        
                       </li>
                     </ul>
 
                   </li>
                   
                   
-                  <li class="col-xs-12 col-sm-4">  
-                    
-                    <ul>
-                      
-                      <li class="dropdown-header">
-                        <img src="http://localhost/shopist/public/uploads/1516002696-h-150-slider-new-en8434.png"> 
-                        
-                        shawls  
-                      </li>
-                    </ul>
-
-                  </li>
+                 
+                  
                   
                   <div class="clear-both"></div>
                   
                 </ul>
               </li>
 
+
               <li class="dropdown mega-dropdown">
-                <a href="#" class="dropdown-toggle menu-name" data-toggle="dropdown"><?php echo trans('frontend.shop_by_cat_label'); ?>  <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle menu-name" data-toggle="dropdown"> Hijab<span class="caret"></span></a>
                 <ul class="dropdown-menu mega-dropdown-menu mega-menu-cat row clearfix">
                   <?php if(count($productCategoriesTree) > 0): ?>
                     <?php $i = 1; $j = 0;?>
@@ -224,31 +260,399 @@
                   <?php endif; ?>
                 </ul>
               </li>
+              <li class="dropdown mega-dropdown">
+                <a href="<?php echo e(url('#')); ?>" class="dropdown-toggle menu-name" data-toggle="dropdown"> Clothing <span class="caret"></span></a>
+                <ul class="dropdown-menu mega-dropdown-menu mega-menu-cat row clearfix">
+                  <li class="col-xs-12 col-sm-4">  
+                    
+                    <ul>
+                      
+                      <li class="dropdown-header">
+                        <img src=""> 
+                        
+                        ALL DRESSES
+                      </li>
+                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/dresses">Dresses</a></li>
+                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/suits">Suits</a></li>
+                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/jumpsuits">Jumpsuits</a></li>
+                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/praying-dress">Praying Dresses</a></li>
 
-              <?php if(Request::is('shop')): ?>
-                <li><a href="<?php echo e(route('shop-page')); ?>" class="main selected menu-name"><?php echo trans('frontend.all_products_label'); ?></a></li>
-              <?php else: ?>
-                <li><a href="<?php echo e(route('shop-page')); ?>" class="main menu-name"><?php echo trans('frontend.all_products_label'); ?></a></li>
-              <?php endif; ?>
+                        <li class="dropdown-header">
+                        <img src=""> 
+                        
+                        TUNICS
+                      </li>
 
-              <?php if(Request::is('checkout')): ?>
-                <li><a href="<?php echo e(route('checkout-page')); ?>" class="main selected menu-name"><?php echo trans('frontend.checkout'); ?></a></li>
-              <?php else: ?>
-                <li><a href="<?php echo e(route('checkout-page')); ?>" class="main menu-name"><?php echo trans('frontend.checkout'); ?></a></li>
-              <?php endif; ?>
+                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/tunics">Tunics</a></li>
+                      <li class="dropdown-header">
+                        <img src=""> 
+                        
+                        LOUNGEWEAR
+                      </li>
 
-              <?php if(Request::is('cart')): ?>
-                <li><a href="<?php echo e(route('cart-page')); ?>" class="main selected menu-name"><?php echo trans('frontend.cart'); ?></a></li>
-              <?php else: ?>
-                <li><a href="<?php echo e(route('cart-page')); ?>" class="main menu-name"><?php echo trans('frontend.cart'); ?></a></li>
-              <?php endif; ?>
+                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/pajamas">Pajamas</a></li>
+                       <li class="product-sub-cat">
+                          <a href="http://islamicdressonline.com/product/categories/underwaear">Underwear</a>
+                        </li>
+                        <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Socks</a></li>
 
-              <?php if(Request::is('blogs')): ?>
-                <li><a href="<?php echo e(route('blogs-page-content')); ?>" class="main selected menu-name"><?php echo trans('frontend.blog'); ?></a></li>
-              <?php else: ?>
-                <li><a href="<?php echo e(route('blogs-page-content')); ?>" class="main menu-name"><?php echo trans('frontend.blog'); ?></a></li>
-              <?php endif; ?>
+                    </ul>
 
+                  </li>
+                  
+                  
+                  <li class="col-xs-12 col-sm-4">  
+                    
+                    <ul>
+                      
+                      <li class="dropdown-header">
+                        <img src=""> 
+                       TOPS
+                        
+                        
+                      </li>
+                       <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Blouses / Shirts</a></li>
+                          <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Jackets</a></li>
+
+                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Vests</a></li>
+
+                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Cardigans</a></li>
+                          <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Sweaters</a></li>
+
+
+                      <li class="dropdown-header">
+                        <img src=""> 
+                       BOTTOMS
+                        
+                        
+                      </li>
+                       <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Pants</a></li>
+                          <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Skirts</a></li>
+
+                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">panties</a></li>
+
+                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Jeans</a></li>
+                         <li class="dropdown-header">
+                         <img src=""> 
+                          KNITWEAR 
+                         </li>
+                      <li class="dropdown-header">
+                        <img src=""> 
+                          MATERNITY CLOTHING 
+                      </li>
+                          
+
+                    </ul>
+
+                  </li>
+                
+                  <div class="clear-both"></div>
+                  
+                </ul>
+              </li>
+
+               <li class="dropdown mega-dropdown">
+                <a href="<?php echo e(url('#')); ?>" class="dropdown-toggle menu-name" data-toggle="dropdown"> Outerwear <span class="caret"></span></a>
+                <ul class="dropdown-menu mega-dropdown-menu mega-menu-cat row clearfix">
+                  <li class="col-xs-12 col-sm-4">  
+                    
+                    <ul>
+                      
+                      <li class="dropdown-header">
+                        <img src=""> 
+                        
+                       OUTERWEAR
+                      </li>
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Coats / Topcoats</a></li>
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/Scarves">Abayas</a></li>
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Trench Coats</a></li>
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Coats</a></li>
+                       <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Jackets</a></li>
+                        <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Puffer Jackets</a></li>
+                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Ponchos</a></li>
+
+                        
+                      
+                    </ul>
+
+                  </li>
+                
+                  <div class="clear-both"></div>
+                  
+                </ul>
+              </li>
+              <li class="dropdown mega-dropdown">
+                <a href="<?php echo e(url('#')); ?>" class="dropdown-toggle menu-name" data-toggle="dropdown"> Plus Size <span class="caret"></span></a>
+                <ul class="dropdown-menu mega-dropdown-menu mega-menu-cat row clearfix">
+                  <li class="col-xs-12 col-sm-4">  
+                    
+                    <ul>
+                      
+                      <li class="dropdown-header">
+                        <img src=""> 
+                        
+                        DRESSES
+                      </li>
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">P. Size Dresses</a></li>
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/Scarves">P. Size Evening Dresses</a></li>
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">P. Size Tunics</a></li>
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">P. Size Suits</a></li>
+
+                        <li class="dropdown-header">
+                        <img src=""> 
+                        
+                        OUTERWEAR
+                      </li>
+
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/Scarves">P. Size Abayas</a></li>
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/Scarves">P. Size Coats/Topcoats</a></li>
+
+
+                      <li class="dropdown-header">
+                        <img src=""> 
+                        
+                        SWIMWEAR
+                      </li>
+
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">P. Size Swimwear</a></li>
+                       <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">P. Size Tracksuit</a></li>
+                       
+
+                    </ul>
+
+                  </li>
+                  
+                  
+                  <li class="col-xs-12 col-sm-4">  
+                    
+                    <ul>
+                      
+                      <li class="dropdown-header">
+                        <img src=""> 
+                       TOPS
+                        
+                        
+                      </li>
+                       <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">P. Size Blouses/Shirts</a></li>
+                          <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">P. Size Vests</a></li>
+
+                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">P. Size Cardigans</a></li>
+
+                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">P. Size Jackets</a></li>
+                         
+
+                      <li class="dropdown-header">
+                        <img src=""> 
+                       BOTTOMS
+                        
+                        
+                      </li>
+                       <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">P. Size Pants</a></li>
+                          <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">P. Size Skirts</a></li>
+
+                    </ul>
+
+                  </li>
+                
+                  <div class="clear-both"></div>
+                  
+                </ul>
+              </li>
+              <li class="dropdown mega-dropdown">
+                <a href="<?php echo e(url('#')); ?>" class="dropdown-toggle menu-name" data-toggle="dropdown"> Swimwear/Sportswear <span class="caret"></span></a>
+                <ul class="dropdown-menu mega-dropdown-menu mega-menu-cat row clearfix">
+                  <li class="col-xs-12 col-sm-4">  
+                    
+                    <ul>
+                      
+                      <li class="dropdown-header">
+                        <img src=""> 
+                        
+                        SWIMWEAR
+                      </li>
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Covered Swimsuits</a></li>
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/Scarves">Semi-Covered Swimsuits</a></li>
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Swimwear Styles/Bikini</a></li>
+                      
+
+                        <li class="dropdown-header">
+                        <img src=""> 
+                        
+                        SPORTSWEAR
+                      </li>
+
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/Scarves">Islamic Sportswear</a></li>
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/Scarves">Pareo</a></li>
+
+
+                      
+                       
+
+                    </ul>
+
+                  </li>
+                  
+                  </li>
+                
+                  <div class="clear-both"></div>
+                  
+                </ul>
+              </li>
+              <li class="dropdown mega-dropdown">
+                <a href="<?php echo e(url('#')); ?>" class="dropdown-toggle menu-name" data-toggle="dropdown"> Shoes/Bags <span class="caret"></span></a>
+                <ul class="dropdown-menu mega-dropdown-menu mega-menu-cat row clearfix">
+                  <li class="col-xs-12 col-sm-4">  
+                    
+                    <ul>
+                      
+                      <li class="dropdown-header">
+                        <img src=""> 
+                        
+                        BAGS
+                      </li>
+                       <li class="dropdown-header">
+                        <img src=""> 
+                        
+                        WALLET
+                      </li>
+                       <li class="dropdown-header">
+                        <img src=""> 
+                        
+                        SUNGLASSES
+                      </li>
+                       <li class="dropdown-header">
+                        <img src=""> 
+                        
+                        WATCHES
+                      </li>
+                       <li class="dropdown-header">
+                        <img src=""> 
+                        
+                        JEWELRY
+
+
+                      </li>
+                       <li class="dropdown-header">
+                        <img src=""> 
+                        
+                        GIFTS
+                      </li>
+                       <li class="dropdown-header">
+                        <img src=""> 
+                        
+                        SHOES
+                      </li>
+
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Boots / Booties</a></li>
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/Scarves">Casual Shoes</a></li>
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">High Heels</a></li>
+                       <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Sports Shoes</a></li>
+                        <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Sandals & Slippers</a></li>
+
+                    </ul>
+
+                  </li>
+                  
+                  </li>
+                
+                  <div class="clear-both"></div>
+                  
+                </ul>
+              </li>
+               <li class="dropdown mega-dropdown">
+                <a href="<?php echo e(url('#')); ?>" class="dropdown-toggle menu-name" data-toggle="dropdown"> Designers <span class="caret"></span></a>
+                <ul class="dropdown-menu mega-dropdown-menu mega-menu-cat row clearfix">
+                  <li class="col-xs-12 col-sm-4">  
+                    
+                    <ul>
+                      
+                      <li class="dropdown-header">
+                        <img src=""> 
+                        
+                       DESIGNERS
+                      </li>
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Kuaybe Gider</a></li>
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/Scarves">Mayovera</a></li>
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Minel Aşk</a></li>
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Nurbanu Kural</a></li>
+                       <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Mevra</a></li>
+                        <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Gamze Özkul</a></li>
+                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Pınar Şems</a></li>
+                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Muslima Wear</a></li>
+                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Dersaadet</a></li>
+                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Nur Kombin</a></li>
+                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Saliha</a></li>
+                         <li class="dropdown-header">
+                        <img src=""> 
+                        
+                      All Brands
+                      </li>
+                      
+                    </ul>
+
+                  </li>
+                
+                  <div class="clear-both"></div>
+                  
+                </ul>
+              </li>
+               <li class="dropdown mega-dropdown">
+                <a href="<?php echo e(url('#')); ?>" class="dropdown-toggle menu-name" data-toggle="dropdown"> Evening Wear <span class="caret"></span></a>
+                <ul class="dropdown-menu mega-dropdown-menu mega-menu-cat row clearfix">
+                  <li class="col-xs-12 col-sm-4">  
+                    
+                    <ul>
+                      
+                      <li class="dropdown-header">
+                        <img src=""> 
+                        
+                       EVENING WEAR
+                      </li>
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Evening Dresses & Gowns</a></li>
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/Scarves">Evening Skirts</a></li>
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Dressy Shawls & Headwear</a></li>
+                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Evening Suits</a></li>
+                       <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Evening Wear</a></li>
+                        
+                        
+                      
+                    </ul>
+
+                  </li>
+                   <li class="col-xs-12 col-sm-4">  
+                    
+                    <ul>
+                      
+                      <li class="dropdown-header">
+                        <img src=""> 
+                      EVENING WEAR BRANDS
+                        
+                        
+                      </li>
+                       <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Dersaadet</a></li>
+                          <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Minel Aşk</a></li>
+
+                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Mevra</a></li>
+
+                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Muslima Wear</a></li>
+                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Modaysa</a></li>
+                         
+
+                      
+                      
+                    </ul>
+
+                  </li>
+                
+                  <div class="clear-both"></div>
+                  
+                </ul>
+              </li>
+
+
+             
+
+              
               <?php if(count($pages_list) > 0): ?>
               <li>
                 <div class="dropdown custom-page">
@@ -315,5 +719,6 @@
       </div>
     </div>
   </div>
+
   <?php endif; ?>
 <?php endif; ?>

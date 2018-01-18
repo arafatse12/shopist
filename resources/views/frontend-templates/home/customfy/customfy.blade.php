@@ -24,7 +24,8 @@
       </div>
       <div class="clear_both"></div>  
     </div>
-  </div>    
+  </div> 
+ 
   
   <div class="row">
     <div class="design-tool-workflow">
@@ -64,7 +65,7 @@
     </div>
   </div>
     
- @if(!empty($appearance_settings_data['home_details']['collection_cat_list']) && count($appearance_settings_data['home_details']['collection_cat_list']) > 0)
+ {{--@if(!empty($appearance_settings_data['home_details']['collection_cat_list']) && count($appearance_settings_data['home_details']['collection_cat_list']) > 0)
   <div class="row">
     <div id="categories_collection" class="categories-collection">
       @foreach($appearance_settings_data['home_details']['collection_cat_list'] as $collection_cat_details)
@@ -87,7 +88,7 @@
     </div>
     <div class="clear_both"></div>
   </div>
-  @endif
+  @endif--}}
     
   @if(!empty($appearance_settings_data['home_details']['cat_name_and_products']) && count($appearance_settings_data['home_details']['cat_name_and_products']) > 0)  
     <div class="row">

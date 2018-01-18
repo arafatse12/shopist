@@ -7,9 +7,9 @@
    }
    .carousel-inner {
     position: relative;
-    width: 66%;
+    width: 100%;
     overflow: hidden;
-    margin-left: 63px;
+    margin-left: 3px;
    }
    .carousel-indicators{
     margin-left: 5%;
@@ -20,6 +20,7 @@
     float: right;
     background: #DFDFDF;
   }
+  
 
 </style>
 
@@ -121,9 +122,7 @@
           </form>
         </div> 
 
-        <div class="col-xs-4 col-sm-2 col-md-3 col-lg-3 text-right"> 
-          <a href="<?php echo e(route('product-comparison-page')); ?>" class="btn btn-default btn-compare"><i class="fa fa-exchange"></i> <span class="hidden-xs hidden-sm"> &nbsp; <?php echo trans('frontend.compare_label'); ?></span> <span class="compare-value"> (<?php echo $total_compare_item;?>)</span></a>
-        </div>  
+   
       </div>
     </div>    
   </div>    
@@ -160,13 +159,13 @@
                         
                         NEW
                       </li>
-                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/new-in-dresses">New In: Dresses</a></li>
-                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/new-in-tunics">New In: Tunics</a></li>
-                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/new-in-topcoats">New In: Topcoats</a></li>
-                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/new-in-abayas">New In: Abayas</a></li>
-                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/new-in-pants">New In: Pants</a></li>
-                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/new-in-skirts">New In: Skirts</a></li>
-                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/new-in-jeans">New In: Jeans</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/new-in-dresses')); ?>">New In: Dresses</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/new-in-tunics')); ?>">New In: Tunics</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/new-in-topcoats')); ?>">New In: Topcoats</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/new-in-abayas')); ?>">New In: Abayas</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/new-in-pants')); ?>">New In: Pants</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/new-in-skirts')); ?>">New In: Skirts</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/new-in-jeans')); ?>">New In: Jeans</a></li>
                        
                            
                        
@@ -179,19 +178,14 @@
                       
                       <li class="dropdown-header">
                         <img src=""> 
-                        <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/new-in-shoes">New In: Shoes</a></li>
-                        <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/new-in-bags">New In: Bags</a></li>
-                         <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/new-in-shawls">New In: Shawls</a></li>
-                          <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/new-in-scarves">New In: Scarves</a></li>
-                          <li class="dropdown-header"><a href ="http://islamicdressonline.com/product/categories/semi-instant-shawls">
-                        
-                        Semi-Instant Shawls</a>
+                        <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/new-in-shoes')); ?>">New In: Shoes</a></li>
+                        <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/new-in-bags')); ?>">New In: Bags</a></li>
+                         <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/new-in-shawls')); ?>">New In: Shawls</a></li>
+                          <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/new-in-scarves')); ?>">New In: Scarves</a></li>
+                          <li class="dropdown-header"><a href ="<?php echo e(url('product/categories/semi-instant-shawls')); ?>">Semi-Instant Shawls</a>
                         
                       </li>
-                      <li class="dropdown-header"><a href="http://islamicdressonline.com/product/categories/instant-scarves">
-                         
-                        
-                        Instant Scarves</a>
+                      <li class="dropdown-header"><a href="<?php echo e(url('product/categories/instant-scarves-2')); ?>">Instant Scarves</a>
                       </li>
                        
                         
@@ -209,57 +203,103 @@
                   
                 </ul>
               </li>
-
-
               <li class="dropdown mega-dropdown">
-                <a href="#" class="dropdown-toggle menu-name" data-toggle="dropdown"> Hijab<span class="caret"></span></a>
+                <a href="<?php echo e(url('#')); ?>" class="dropdown-toggle menu-name" data-toggle="dropdown"> Hijab <span class="caret"></span></a>
                 <ul class="dropdown-menu mega-dropdown-menu mega-menu-cat row clearfix">
-                  <?php if(count($productCategoriesTree) > 0): ?>
-                    <?php $i = 1; $j = 0;?>
-                    <?php $__currentLoopData = $productCategoriesTree; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $cat): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
-                      <?php if($i == 1): ?>
-                      <?php $j++; ?>
-                      <li class="col-xs-12 col-sm-4">  
-                      <?php endif; ?>
-
-                      <ul>
-                        <?php if(isset($cat['parent']) && $cat['parent'] == 'Parent Category'): ?>  
-                        <li class="dropdown-header">
-                            <?php if( $cat['img_url'] ): ?>
-                            <img src="<?php echo e(get_image_url($cat['img_url'])); ?>"> 
-                            <?php else: ?>
-                            <img src="<?php echo e(default_placeholder_img_src()); ?>"> 
-                            <?php endif; ?>
-                            
-                            <?php echo $cat['name']; ?>
-
-                        </li>
-                        <?php endif; ?>
-                        <?php if(isset($cat['children']) && count($cat['children']) > 0): ?>
-                          <?php $__currentLoopData = $cat['children']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $cat_sub): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
-                            <li class="product-sub-cat"><a href="<?php echo e(route('categories-page', $cat_sub['slug'])); ?>"><?php echo $cat_sub['name']; ?></a></li>
-                            <?php if(isset($cat_sub['children']) && count($cat_sub['children']) > 0): ?>
-                              <?php echo $__env->make('pages.common.category-frontend-loop-home', $cat_sub, array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-                            <?php endif; ?>
-                          <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
-                        <?php endif; ?>
-                      </ul>
-
-                      <?php if($i == 1): ?>
+                  <li class="col-xs-12 col-sm-4">  
+                    
+                    <ul>
+                      
+                      <li class="dropdown-header">
+                        <img src=""> 
+                        
+                        HIJABS
                       </li>
-                      <?php $i = 0;?>
-                      <?php endif; ?>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/shawls')); ?>">Shawls</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/scarves')); ?>">Scarves</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/headwear')); ?>">Headwear</a></li>
+                       <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/chiffon')); ?>">Chiffon</a></li>
+                     
 
-                      <?php if($j == 3 || $j == 4): ?>
-                      <div class="clear-both"></div>
-                      <?php $j = 0; ?>
-                      <?php endif; ?>
+                        <li class="dropdown-header">
+                        <img src=""> 
+                        
+                        SHAWLS
+                      </li>
 
-                      <?php $i ++;?>
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
-                  <?php endif; ?>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/silk')); ?>">Silk</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/chiffon')); ?>">Chiffon</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/pashmina')); ?>">Pashmina</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/silk-blend')); ?>">Silk Blend</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/pinless-shawls')); ?>">Pinless Shawls</a></li>
+                      
+
+                      
+
+                    </ul>
+
+                  </li>
+                  
+                  
+                  <li class="col-xs-12 col-sm-4">  
+                    
+                    <ul>
+                      
+                      <li class="dropdown-header">
+                        <img src=""> 
+                       DESIGNERS
+                        
+                        
+                      </li>
+                       <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/rabia-z')); ?>">Rabia Z</a></li>
+                          <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/tuva-Şal')); ?>">Tuva Şal</a></li>
+
+                         <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/ayşe-türban')); ?>">Ayşe Türban</a></li>
+                         <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/tulipa-türban')); ?>">Tulipa Türban</a></li>
+                          <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/argite')); ?>">Argite</a></li>
+                          <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/mirach')); ?>">Mirach
+                          </a></li>
+                          <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/duanil')); ?>">Duanil</a></li>
+                          <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/zehrace-Şal')); ?>">Zehrace Şal</a></li>
+                          <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/tajj')); ?>">Tajj</a></li>
+                          <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/differenza')); ?>">Differenza</a></li>
+                          <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/cŞK-unique')); ?>">CŞK Unique</a></li>
+                          <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/capsters')); ?>">Capsters</a></li>
+                          <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/theFAD.co')); ?>">TheFAD.co</a></li>
+
+
+                      
+                       
+
+                    </ul>
+
+                  </li>
+                   <li class="col-xs-12 col-sm-4">  
+                    
+                    <ul>
+                      
+                      <li class="dropdown-header">
+                        <img src=""> 
+                       ACCESSORIES
+                        
+                        
+                      </li>
+                       <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/instant-scarves')); ?>">Instant Scarves</a></li>
+                          <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/ponchos-and-shawl-wraps')); ?>">Ponchos and Shawl Wraps</a></li>
+
+                         <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/arm-sleeves-neckcovers')); ?>">Arm Sleeves-Neckcovers</a></li>
+                         <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/shawl-scarf-accessory')); ?>">Shawl & Scarf Accessory</a></li>
+                          <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/scarf-hanger')); ?>">Scarf Hanger</a></li>
+                        </ul>
+
+                  </li>
+                
+                  <div class="clear-both"></div>
+                  
                 </ul>
               </li>
+
+
               <li class="dropdown mega-dropdown">
                 <a href="<?php echo e(url('#')); ?>" class="dropdown-toggle menu-name" data-toggle="dropdown"> Clothing <span class="caret"></span></a>
                 <ul class="dropdown-menu mega-dropdown-menu mega-menu-cat row clearfix">
@@ -272,10 +312,10 @@
                         
                         ALL DRESSES
                       </li>
-                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/dresses">Dresses</a></li>
-                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/suits">Suits</a></li>
-                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/jumpsuits">Jumpsuits</a></li>
-                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/praying-dress">Praying Dresses</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/dresses')); ?>">Dresses</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/suits')); ?>">Suits</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/jumpsuits')); ?>">Jumpsuits</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/praying-dress')); ?>">Praying Dresses</a></li>
 
                         <li class="dropdown-header">
                         <img src=""> 
@@ -283,18 +323,18 @@
                         TUNICS
                       </li>
 
-                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/tunics">Tunics</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/tunics')); ?>">Tunics</a></li>
                       <li class="dropdown-header">
                         <img src=""> 
                         
                         LOUNGEWEAR
                       </li>
 
-                      <li class="product-sub-cat"><a href="http://islamicdressonline.com/product/categories/pajamas">Pajamas</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/pajamas')); ?>">Pajamas</a></li>
                        <li class="product-sub-cat">
-                          <a href="http://islamicdressonline.com/product/categories/underwaear">Underwear</a>
+                          <a href="<?php echo e(url('product/categories/underwaear')); ?>">Underwear</a>
                         </li>
-                        <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Socks</a></li>
+                        <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/socks')); ?>">Socks</a></li>
 
                     </ul>
 
@@ -311,13 +351,12 @@
                         
                         
                       </li>
-                       <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Blouses / Shirts</a></li>
-                          <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Jackets</a></li>
+                       <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/blouses-shirts')); ?>">Blouses / Shirts</a></li>
+                          <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/jackets')); ?>">Jackets</a></li>
 
-                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Vests</a></li>
-
-                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Cardigans</a></li>
-                          <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Sweaters</a></li>
+                         <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/vests')); ?>">Vests</a></li>
+                         <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/cardigans')); ?>">Cardigans</a></li>
+                          <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/sweaters')); ?>">Sweaters</a></li>
 
 
                       <li class="dropdown-header">
@@ -326,12 +365,12 @@
                         
                         
                       </li>
-                       <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Pants</a></li>
-                          <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Skirts</a></li>
+                       <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/pants')); ?>">Pants</a></li>
+                          <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/skirts')); ?>">Skirts</a></li>
 
-                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">panties</a></li>
+                         <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/panties')); ?>">panties</a></li>
 
-                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Jeans</a></li>
+                         <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/jeans')); ?>">Jeans</a></li>
                          <li class="dropdown-header">
                          <img src=""> 
                           KNITWEAR 
@@ -350,6 +389,7 @@
                   
                 </ul>
               </li>
+               
 
                <li class="dropdown mega-dropdown">
                 <a href="<?php echo e(url('#')); ?>" class="dropdown-toggle menu-name" data-toggle="dropdown"> Outerwear <span class="caret"></span></a>
@@ -363,13 +403,13 @@
                         
                        OUTERWEAR
                       </li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Coats / Topcoats</a></li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/Scarves">Abayas</a></li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Trench Coats</a></li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Coats</a></li>
-                       <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Jackets</a></li>
-                        <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Puffer Jackets</a></li>
-                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Ponchos</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/coats-topcoats')); ?>">Coats / Topcoats</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/abayas')); ?>">Abayas</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/trench-coats')); ?>">Trench Coats</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/coats')); ?>">Coats</a></li>
+                       <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/jackets')); ?>">Jackets</a></li>
+                        <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/puffer-jackets')); ?>">Puffer Jackets</a></li>
+                         <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/ponchos')); ?>">Ponchos</a></li>
 
                         
                       
@@ -393,10 +433,10 @@
                         
                         DRESSES
                       </li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">P. Size Dresses</a></li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/Scarves">P. Size Evening Dresses</a></li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">P. Size Tunics</a></li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">P. Size Suits</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/p-size-dresses')); ?>">P. Size Dresses</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/p-size-evening-dresses')); ?>">P. Size Evening Dresses</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/p-size-tunics')); ?>">P. Size Tunics</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/p-size-suits')); ?>">P. Size Suits</a></li>
 
                         <li class="dropdown-header">
                         <img src=""> 
@@ -404,8 +444,8 @@
                         OUTERWEAR
                       </li>
 
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/Scarves">P. Size Abayas</a></li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/Scarves">P. Size Coats/Topcoats</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/p-size-abayas')); ?>">P. Size Abayas</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/p-size-coats-topcoats')); ?>">P. Size Coats/Topcoats</a></li>
 
 
                       <li class="dropdown-header">
@@ -414,8 +454,9 @@
                         SWIMWEAR
                       </li>
 
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">P. Size Swimwear</a></li>
-                       <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">P. Size Tracksuit</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/p-size-swimwear')); ?>">P. Size Swimwear</a></li>
+                       <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/p-size-tracksuit')); ?>">P. Size Tracksuit</a></li>
+                       <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/p-size-tracksuit')); ?>">P. Size Tracksuit</a></li>
                        
 
                     </ul>
@@ -433,12 +474,12 @@
                         
                         
                       </li>
-                       <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">P. Size Blouses/Shirts</a></li>
-                          <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">P. Size Vests</a></li>
+                       <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/p-size-blouses-shirts')); ?>">P. Size Blouses/Shirts</a></li>
+                          <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/p-size-vests')); ?>">P. Size Vests</a></li>
 
-                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">P. Size Cardigans</a></li>
+                         <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/p-size-cardigans')); ?>">P. Size Cardigans</a></li>
 
-                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">P. Size Jackets</a></li>
+                         <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/p-size-jackets')); ?>">P. Size Jackets</a></li>
                          
 
                       <li class="dropdown-header">
@@ -447,8 +488,8 @@
                         
                         
                       </li>
-                       <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">P. Size Pants</a></li>
-                          <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">P. Size Skirts</a></li>
+                       <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/p-size-pants')); ?>">P. Size Pants</a></li>
+                          <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/p-size-skirts')); ?>">P. Size Skirts</a></li>
 
                     </ul>
 
@@ -470,9 +511,9 @@
                         
                         SWIMWEAR
                       </li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Covered Swimsuits</a></li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/Scarves">Semi-Covered Swimsuits</a></li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Swimwear Styles/Bikini</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/covered-swimsuits')); ?>">Covered Swimsuits</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/semi-covered-swimsuits')); ?>">Semi-Covered Swimsuits</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/swimwear-styles-bikini')); ?>">Swimwear Styles/Bikini</a></li>
                       
 
                         <li class="dropdown-header">
@@ -481,8 +522,8 @@
                         SPORTSWEAR
                       </li>
 
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/Scarves">Islamic Sportswear</a></li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/Scarves">Pareo</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/islamic-sportswear')); ?>">Islamic Sportswear</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/pareo')); ?>">Pareo</a></li>
 
 
                       
@@ -543,11 +584,11 @@
                         SHOES
                       </li>
 
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Boots / Booties</a></li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/Scarves">Casual Shoes</a></li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">High Heels</a></li>
-                       <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Sports Shoes</a></li>
-                        <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Sandals & Slippers</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/boots-booties')); ?>">Boots / Booties</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/casual-shoes')); ?>">Casual Shoes</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/high-heels')); ?>">High Heels</a></li>
+                       <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/sports-shoes')); ?>">Sports Shoes</a></li>
+                        <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/sandals-slippers')); ?>">Sandals & Slippers</a></li>
 
                     </ul>
 
@@ -571,17 +612,17 @@
                         
                        DESIGNERS
                       </li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Kuaybe Gider</a></li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/Scarves">Mayovera</a></li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Minel Aşk</a></li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Nurbanu Kural</a></li>
-                       <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Mevra</a></li>
-                        <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Gamze Özkul</a></li>
-                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Pınar Şems</a></li>
-                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Muslima Wear</a></li>
-                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Dersaadet</a></li>
-                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Nur Kombin</a></li>
-                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Saliha</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/kuaybe-gider')); ?>">Kuaybe Gider</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/mayovera')); ?>">Mayovera</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/minel-aşk')); ?>">Minel Aşk</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/nurbanu-kural')); ?>">Nurbanu Kural</a></li>
+                       <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/mevrm')); ?>">Mevra</a></li>
+                        <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/gamze-Özkul')); ?>">Gamze Özkul</a></li>
+                         <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/pınar-Şems')); ?>">Pınar Şems</a></li>
+                         <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/muslima-wear')); ?>">Muslima Wear</a></li>
+                         <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/dersaadet')); ?>">Dersaadet</a></li>
+                         <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/nur-kombin')); ?>">Nur Kombin</a></li>
+                         <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/saliha')); ?>">Saliha</a></li>
                          <li class="dropdown-header">
                         <img src=""> 
                         
@@ -608,11 +649,11 @@
                         
                        EVENING WEAR
                       </li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Evening Dresses & Gowns</a></li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/Scarves">Evening Skirts</a></li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Dressy Shawls & Headwear</a></li>
-                      <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Evening Suits</a></li>
-                       <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/SHAWLS">Evening Wear</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/evening-dresses-gowns')); ?>">Evening Dresses & Gowns</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/evening-skirts')); ?>">Evening Skirts</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/dressy-shawls-headwear')); ?>">Dressy Shawls & Headwear</a></li>
+                      <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/scarf-hanger')); ?>evening-suits">Evening Suits</a></li>
+                       <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/evening-wear')); ?>">Evening Wear</a></li>
                         
                         
                       
@@ -629,13 +670,13 @@
                         
                         
                       </li>
-                       <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Dersaadet</a></li>
-                          <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Minel Aşk</a></li>
+                       <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/dersaadet')); ?>">Dersaadet</a></li>
+                          <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/minel-aşk')); ?>">Minel Aşk</a></li>
 
-                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Mevra</a></li>
+                         <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/mevra')); ?>">Mevra</a></li>
 
-                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Muslima Wear</a></li>
-                         <li class="product-sub-cat"><a href="http://localhost/shopist/product/categories/headwear">Modaysa</a></li>
+                         <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/muslima-wear')); ?><">Muslima Wear</a></li>
+                         <li class="product-sub-cat"><a href="<?php echo e(url('product/categories/modaysa')); ?>">Modaysa</a></li>
                          
 
                       
@@ -679,6 +720,11 @@
   <?php $count = count(get_appearance_header_settings_data());?>
   <?php if($count > 0): ?>
   <div class="header-with-slider">
+    <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-xs-8">
+    
+
     <div id="slider-carousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <?php for($i = 0; $i < $count; $i++): ?>
@@ -717,8 +763,16 @@
           <?php $numb++ ; ?>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
       </div>
+      
     </div>
   </div>
+   <div class="col-md-4 col-xs-4">
 
+    <img alt="Stilini Yansıt" src="https://fns.modanisa.com/r/catban/banner-set/stilini-yansit-lansman-yani-1Ly_en.png?v=7" width="360" height="310">
+
+   </div>
+  </div>
+  </div>
+</div>
   <?php endif; ?>
 <?php endif; ?>

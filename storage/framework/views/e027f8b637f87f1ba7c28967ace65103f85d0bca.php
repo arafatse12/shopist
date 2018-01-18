@@ -24,7 +24,8 @@
       </div>
       <div class="clear_both"></div>  
     </div>
-  </div>    
+  </div> 
+ 
   
   <div class="row">
     <div class="design-tool-workflow">
@@ -64,30 +65,7 @@
     </div>
   </div>
     
- <?php if(!empty($appearance_settings_data['home_details']['collection_cat_list']) && count($appearance_settings_data['home_details']['collection_cat_list']) > 0): ?>
-  <div class="row">
-    <div id="categories_collection" class="categories-collection">
-      <?php $__currentLoopData = $appearance_settings_data['home_details']['collection_cat_list']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $collection_cat_details): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
-        <?php if($collection_cat_details['status'] == 1): ?>
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-          <div class="category">
-            <a href="<?php echo e(route('categories-page', $collection_cat_details['slug'])); ?>">
-              <?php if(!empty($collection_cat_details['category_img_url'])): ?>  
-              <img class="img-responsive" src="<?php echo e(get_image_url($collection_cat_details['category_img_url'])); ?>">
-              <?php else: ?>
-              <img class="img-responsive" src="<?php echo e(default_placeholder_img_src()); ?>">
-              <?php endif; ?>
-              <div class="category-collection-mask"></div>
-              <h3 class="category-title"><?php echo $collection_cat_details['name']; ?> <span><?php echo trans('frontend.collection_label'); ?></span></h3>
-            </a>
-          </div>
-        </div>
-        <?php endif; ?>
-      <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
-    </div>
-    <div class="clear_both"></div>
-  </div>
-  <?php endif; ?>
+ 
     
   <?php if(!empty($appearance_settings_data['home_details']['cat_name_and_products']) && count($appearance_settings_data['home_details']['cat_name_and_products']) > 0): ?>  
     <div class="row">
